@@ -1,0 +1,11 @@
+livenessProbe:
+  exec:
+    command: ["true"]
+  initialDelaySeconds: 3
+  periodSeconds: 10
+
+readinessProbe:
+  tcpSocket:
+    port: 6379
+  initialDelaySeconds: 5
+  periodSeconds: 10
